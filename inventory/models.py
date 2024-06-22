@@ -1,5 +1,6 @@
 from django.db import models
 from django.conf import settings
+
 # Create your models here.
 class Equipment(models.Model):
     name = models.CharField(max_length=100)
@@ -7,7 +8,7 @@ class Equipment(models.Model):
     available = models.BooleanField(default=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+
     def __str__(self):
         return str(self.name)
 
@@ -18,6 +19,6 @@ class Booking(models.Model):
     booking_date = models.DateTimeField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    
+
     def __str__(self):
         return str(self.user.username)
