@@ -90,34 +90,10 @@
               type="text"
               placeholder="Search here..."
             />
-            <img src="svg/search.svg" alt="" class="fn__svg search__icon" />
+            <img src="{% static 'svg/search.svg' %}" alt="" class="fn__svg search__icon" />
             <a class="search__closer" href="#"
-              ><img src="svg/close.svg" alt="" class="fn__svg"
+              ><img src="{% static 'svg/close.svg' %}" alt="" class="fn__svg"
             /></a>
-          </div>
-          <div class="search__results">
-            <!-- Results will come here (via ajax after the integration you made after purchase as it doesn't work in HTML) -->
-            <div class="results__title">Results</div>
-            <div class="results__list">
-              <ul>
-                <li><a href="#">Artificial Intelligence</a></li>
-                <li>
-                  <a href="#"
-                    >Learn about the impact of AI on the financial industry</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    >Delve into the realm of AI-driven manufacturing</a
-                  >
-                </li>
-                <li>
-                  <a href="#"
-                    >Understand the ethical implications surrounding AI</a
-                  >
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
         <!-- !Searchbar -->
@@ -134,8 +110,8 @@
               <!-- Site Skin (bar item) -->
               <div class="bar__item bar__item_skin">
                 <a href="#" class="item_opener fn__tooltip" title="Dark/Light">
-                  <img src="svg/sun.svg" alt="" class="fn__svg light_mode" />
-                  <img src="svg/moon.svg" alt="" class="fn__svg dark_mode" />
+                  <img src="{% static 'svg/sun.svg' %}" alt="" class="fn__svg light_mode" />
+                  <img src="{% static 'svg/moon.svg' %}" alt="" class="fn__svg dark_mode" />
                 </a>
               </div>
               <!-- !Site Skin (bar item) -->
@@ -147,12 +123,12 @@
                   class="user_opener fn__tooltip"
                   title="User Profile"
                 >
-                  <img src="img/user/user.jpg" alt="" />
+                  <img src="{% static 'img/user/user.jpg' %}" alt="" />
                 </a>
                 <div class="item_popup" data-position="right">
                   <div class="user_profile">
                     <div class="user_img">
-                      <img src="img/user/user.jpg" alt="" />
+                      <img src="{% static 'img/user/user.jpg' %}" alt="" />
                     </div>
                     <div class="user_info">
                       <h2 class="user_name">Caden Smith<span>Free</span></h2>
@@ -168,7 +144,7 @@
                       <li>
                         <a href="user-profile.html">
                           <span class="icon"
-                            ><img src="svg/person.svg" alt="" class="fn__svg"
+                            ><img src="{% static 'svg/person.svg' %}" alt="" class="fn__svg"
                           /></span>
                           <span class="text">Profile</span>
                         </a>
@@ -176,7 +152,7 @@
                       <li>
                         <a href="user-settings.html">
                           <span class="icon"
-                            ><img src="svg/setting.svg" alt="" class="fn__svg"
+                            ><img src="{% static 'svg/setting.svg' %}" alt="" class="fn__svg"
                           /></span>
                           <span class="text">Settings</span>
                         </a>
@@ -184,7 +160,7 @@
                       <li>
                         <a href="user-billing.html">
                           <span class="icon"
-                            ><img src="svg/billing.svg" alt="" class="fn__svg"
+                            ><img src="{% static 'svg/billing.svg' %}" alt="" class="fn__svg"
                           /></span>
                           <span class="text">Billing</span>
                         </a>
@@ -192,7 +168,7 @@
                       <li>
                         <a href="sign-in.html">
                           <span class="icon"
-                            ><img src="svg/logout.svg" alt="" class="fn__svg"
+                            ><img src="{% static 'svg/logout.svg' %}" alt="" class="fn__svg"
                           /></span>
                           <span class="text">Log Out</span>
                         </a>
@@ -217,34 +193,34 @@
             <a href="index.html" class="fn_logo">
               <span class="full_logo">
                 <img
-                  src="img/logo-desktop-full.png"
+                  src="{% static 'img/logo-desktop-full.png' %}"
                   alt=""
                   class="desktop_logo"
                 />
                 <img
-                  src="img/logo-retina-full.png"
+                  src="{% static 'img/logo-retina-full.png' %}"
                   alt=""
                   class="retina_logo"
                 />
               </span>
               <span class="short_logo">
                 <img
-                  src="img/logo-desktop-mini.png"
+                  src="{% static 'img/logo-desktop-mini.png' %}"
                   alt=""
                   class="desktop_logo"
                 />
                 <img
-                  src="img/logo-retina-mini.png"
+                  src="{% static 'img/logo-retina-mini.png' %}"
                   alt=""
                   class="retina_logo"
                 />
               </span>
             </a>
             <a href="#" class="fn__closer fn__icon_button desktop_closer">
-              <img src="svg/arrow.svg" alt="" class="fn__svg" />
+              <img src="{% static 'svg/arrow.svg' %}" alt="" class="fn__svg" />
             </a>
             <a href="#" class="fn__closer fn__icon_button mobile_closer">
-              <img src="svg/arrow.svg" alt="" class="fn__svg" />
+              <img src="{% static 'svg/arrow.svg' %}" alt="" class="fn__svg" />
             </a>
           </div>
           <!-- !logo (left panel) -->
@@ -263,7 +239,7 @@
                     title="Home"
                   >
                     <span class="icon"
-                      ><img src="svg/home.svg" alt="" class="fn__svg"
+                      ><img src="{% static 'svg/home.svg' %}" alt="" class="fn__svg"
                     /></span>
                     <span class="text">Home</span>
                   </a>
@@ -276,7 +252,7 @@
                     title="Community Feed"
                   >
                     <span class="icon"
-                      ><img src="svg/community.svg" alt="" class="fn__svg"
+                      ><img src="{% static 'svg/community.svg' %}" alt="" class="fn__svg"
                     /></span>
                     <span class="text">Community Feed</span>
                   </a>
@@ -289,7 +265,7 @@
                     title="Personal Feed"
                   >
                     <span class="icon"
-                      ><img src="svg/person.svg" alt="" class="fn__svg"
+                      ><img src="{% static 'svg/person.svg' %}" alt="" class="fn__svg"
                     /></span>
                     <span class="text"
                       >Personal Feed<span class="count">48</span></span
@@ -304,7 +280,7 @@
                     title="Finetuned Models"
                   >
                     <span class="icon"
-                      ><img src="svg/cube.svg" alt="" class="fn__svg"
+                      ><img src="{% static 'svg/cube.svg' %}" alt="" class="fn__svg"
                     /></span>
                     <span class="text">Finetuned Models</span>
                   </a>
