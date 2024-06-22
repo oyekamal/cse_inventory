@@ -1,17 +1,47 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Equipment List</title>
-</head>
-<body>
-    <h1>Equipment List</h1>
-    <ul>
-        {% for item in equipment %}
-        <li>
-            <a href="{% url 'equipment_detail' item.id %}">{{ item.name }}</a>
-        </li>
-        {% endfor %}
-    </ul>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="section_home">
+    <div class="section_left">
+        
+        <!-- Title Shortcode -->
+        <div class="techwave_fn_title_holder">
+            <h1 class="title">Equipment List</h1>
+            <ul>
+                {% for item in equipment %}
+                <li>
+                    <a href="{% url 'equipment_detail' item.id %}">{{ item.name }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        
+        </div>
+        <!-- !Title Shortcode -->
+
+    </div>
+    <div class="section_right">
+        <div class="company_info">
+            <img src="{% static 'img/logo-desktop-full.png' %}" alt="">
+            <p class="fn__animated_text">The official server of TECH-AI, a text-to-image AI where your imagination is the only limit. We’re building market-leading features that will give you greater control over your generations.</p>
+            <hr>
+            <div class="fn__members">
+                <div class="active item">
+                    <span class="circle"></span>
+                    <span class="text">1,154,694 Online</span>
+                </div>
+                <div class="item">
+                    <span class="circle"></span>
+                    <span class="text">77,345,912 Members</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
