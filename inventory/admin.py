@@ -36,5 +36,4 @@ class BookingAdmin(admin.ModelAdmin):
         "updated_at",
     )
     date_hierarchy = "created_at"
-    search_fields = ("user__username","equipment__name")
-
+    search_fields = ("user__username", "equipment__name")

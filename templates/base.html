@@ -130,49 +130,51 @@
                     <div class="user_img">
                       <img src="{% static 'img/user/user.jpg' %}" alt="" />
                     </div>
+                    {% if user.is_authenticated %}
                     <div class="user_info">
-                      <h2 class="user_name">Caden Smith<span>Free</span></h2>
+                      <h2 class="user_name">{{user.username}}</h2>
                       <p>
-                        <a href="mailto:cadmail@gmail.com" class="user_email"
-                          >cadmail@gmail.com</a
+                        <a class="user_email"
+                          >{{user.email}}</a
                         >
                       </p>
                     </div>
+                    {% endif %}
+
                   </div>
                   <div class="user_nav">
                     <ul>
+                      {% if user.is_authenticated %}
+
                       <li>
-                        <a href="user-profile.html">
-                          <span class="icon"
-                            ><img src="{% static 'svg/person.svg' %}" alt="" class="fn__svg"
-                          /></span>
-                          <span class="text">Profile</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="user-settings.html">
-                          <span class="icon"
-                            ><img src="{% static 'svg/setting.svg' %}" alt="" class="fn__svg"
-                          /></span>
-                          <span class="text">Settings</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="user-billing.html">
-                          <span class="icon"
-                            ><img src="{% static 'svg/billing.svg' %}" alt="" class="fn__svg"
-                          /></span>
-                          <span class="text">Billing</span>
-                        </a>
-                      </li>
-                      <li>
-                        <a href="sign-in.html">
+                        <a href="/accounts/logout/">
                           <span class="icon"
                             ><img src="{% static 'svg/logout.svg' %}" alt="" class="fn__svg"
                           /></span>
                           <span class="text">Log Out</span>
                         </a>
                       </li>
+
+                      {% else %}
+                      <li>
+                        <a href="/accounts/signup/">
+                          <span class="icon"
+                            ><img src="{% static 'svg/logout.svg' %}" alt="" class="fn__svg"
+                          /></span>
+                          <span class="text">Sige up</span>
+                        </a>
+                      </li>
+
+                      <li>
+                        <a href="/accounts/login/">
+                          <span class="icon"
+                            ><img src="{% static 'svg/logout.svg' %}" alt="" class="fn__svg"
+                          /></span>
+                          <span class="text">Login</span>
+                        </a>
+                      </li>
+                      {% endif %}
+
                     </ul>
                   </div>
                 </div>
