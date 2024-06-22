@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ equipment.name }}</title>
+</head>
+<body>
+    <h1>{{ equipment.name }}</h1>
+    <p>{{ equipment.description }}</p>
+    <form action="{% url 'book_equipment' equipment.id %}" method="post">
+        {% csrf_token %}
+        <button type="submit">Book</button>
+    </form>
+</body>
+</html>

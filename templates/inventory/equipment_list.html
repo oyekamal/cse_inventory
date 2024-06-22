@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipment List</title>
+</head>
+<body>
+    <h1>Equipment List</h1>
+    <ul>
+        {% for item in equipment %}
+        <li>
+            <a href="{% url 'equipment_detail' item.id %}">{{ item.name }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
