@@ -3,8 +3,9 @@
 from django.db import migrations
 from django.utils import timezone
 
+
 def create_equipment_data(apps, schema_editor):
-    Equipment = apps.get_model('inventory', 'Equipment')
+    Equipment = apps.get_model("inventory", "Equipment")
     equipment_list = [
         {
             "name": "Laptop",
@@ -32,10 +33,14 @@ def create_equipment_data(apps, schema_editor):
             updated_at=timezone.now(),
         )
 
+
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('inventory', '0001_initial'),  # This should match the initial migration filename
+        (
+            "inventory",
+            "0001_initial",
+        ),  # This should match the initial migration filename
     ]
 
     operations = [

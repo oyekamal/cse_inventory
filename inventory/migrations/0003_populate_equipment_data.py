@@ -6,8 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('inventory', '0002_populate_equipment_data'),
+        ("inventory", "0002_populate_equipment_data"),
     ]
 
-    operations = [
-    ]
+    operations = []
